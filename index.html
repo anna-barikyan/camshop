@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
   <title>CamShop</title>
     </head>
@@ -14,7 +15,8 @@
       
         <div class="container-fluid">
            
-          
+          <div class="header">
+
          <div class="row bg-dark p-3">   
             <div class="col-6 col-lg-4">
             <a  href="index.html" class="text-white font-weight-bold align-center"> CamShop
@@ -22,7 +24,7 @@
             </a>
             </div>
              
-           <div class= "col-6  col-lg-auto d-none d-lg-block p-1 ml-auto">
+           <div class= "col-lg-auto d-none d-lg-block p-1 ml-auto">
            <form class="form-inline">
            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
@@ -31,7 +33,7 @@
             
             
              
-             <div class="dropdown col-lg-auto col-6">
+             <div class="dropdown col-lg-auto col-4 mt-1">
              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       My Account
              </button>
@@ -39,10 +41,20 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#LoginModal">Login</a>
                       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#RegistrationModal">Registration</a>
-                      <a class="dropdown-item" href="#">Orders</a>
-                      <a class="dropdown-item" href="#">Settings</a>
+                      <a class="dropdown-item" href="my_account.html">Orders</a>
+                      <a class="dropdown-item" href="my_info.html">Settings</a>
                     </div>
-              </div>
+                  </div>
+
+                  <div class="col-2 col-lg-auto">
+                   
+                  <button type="button" class="btn btn-danger">
+                    <a href="cart.html"><img src="https://pluspng.com/img-png/shop-png-black-and-white-logo-512.png" style="width:40px"></a> 
+                  </button>
+
+                </div>
+
+
             </div>
     
       
@@ -70,9 +82,9 @@
         <option value="3">€ - Euro</option>
       </select>
     </div>
-      <button type="button" class="btn btn-danger col-lg d-none d-lg-block">
+      <a href="my_account.html" type="button" class="btn btn-danger col-lg d-none d-lg-block">
         Wishlist <span class="badge badge-light">5</span>
-      </button>
+      </a>
          </div>
 
   
@@ -90,9 +102,9 @@
                 Canon
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+                <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lense</a>
+                <a class="dropdown-item" href="#">Other</a></div>
             </li>
           </ul>
 
@@ -103,9 +115,9 @@
                Nikon
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+               <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lense</a>
+                <a class="dropdown-item" href="#">Other</a></div>
             </li>
           </ul>
 
@@ -113,12 +125,12 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                 Fuji
+                 Fujifilm
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+            <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lense</a>
+                <a class="dropdown-item" href="#">Film</a></div>
             </li>
           </ul>
 
@@ -129,9 +141,9 @@
                  Sony
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+                <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lens</a>
+                <a class="dropdown-item" href="#">Film</a></div>
             </li>
           </ul>
 
@@ -142,9 +154,9 @@
                  Minolta
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+              <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lens</a>
+                <a class="dropdown-item" href="#">Other</a></div>
             </li>
           </ul>
 
@@ -155,30 +167,23 @@
                 Kodak
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+              <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lighting</a>
+                <a class="dropdown-item" href="#">Film</a></div>
             </li>
           </ul>
 </nav>
+        </div>
         
         
-        
-<div class="mt-3 alert alert-danger d-none d-xl-block" role="alert">
-  We are delivering to your region with limited shipping options. Please expect extended delivery time. Learn more...
-   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>        
-                         
-    <div class="mt-3 alert alert-danger d-block d-xl-none" style="font-size:8px" role="alert">
-  We are delivering to your region with limited shipping options. Please expect extended delivery time. Learn more...
-   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>        
-                 
-             <div id="carouselExampleCaptions" class="carousel slide m-4 h-50" data-ride="carousel">
+  <div class="mt-3 alert alert-danger d-none d-xl-block " role="alert">
+       We are delivering to your region with limited shipping options. Please expect extended delivery time. Learn more...
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+  </div>        
+
+             <div id="carouselExampleCaptions" class="carousel slide m-4 bg-dark d-none d-md-none d-lg-none d-xl-block" style="max-height: 340px" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -186,21 +191,54 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <a href="">
-            <img src="https://i.ytimg.com/vi/qm0hB0KT1os/maxresdefault.jpg" class="d-block w-100 img-fluid" alt="...">
-            </a>
+            <div class="row">
+              <div class="col-lg-6">
+                <a href="">
+                  <img src="https://pngriver.com/wp-content/uploads/2018/02/download-canon-80d-dslr-camera-PNG-transparent-images-transparent-backgrounds-PNGRIVER-COM-80d_18-55stm.png" class="d-block img-fluid ml-auto w-50" style="max-width: 400px" alt="...">
+                </a>
+              </div>
+              <div class="col col-xl-6 col-lg-6 m-auto text-light">
+        <h4>Canon EOS 80D</h4>
+        <h5>$799</h5>
+      <a class="btn btn-danger" href="item.html" role="button">Buy now</a>
+        <a class="btn btn-secondary" href="https://pngriver.com/wp-content/uploads/2018/02/download-canon-80d-dslr-camera-PNG-transparent-images-transparent-backgrounds-PNGRIVER-COM-80d_18-55stm.png" role="button">View</a>
           </div>
-          <div class="carousel-item">
-            <a href="">
-            <img src="https://i.ytimg.com/vi/F0d9TpflXuI/maxresdefault.jpg" class="d-block w-100 img-fluid" alt="...">
-            </a>
+       </div>
+    </div>
+
+          <div class="carousel-item ">
+            <div class="row">
+              <div class="col-lg-6">
+                <a href="">
+                  <img src="https://cdn.pixabay.com/photo/2016/12/27/09/57/lens-1933639_960_720.png" class="d-block img-fluid ml-auto" style="max-width:350px" alt="...">
+                </a>
+              </div>
+              <div class="col col-xl-6 col-lg-6 m-auto text-light">
+        <h4>Canon 16-35mm Lens</h4>
+        <h5>$299</h5>
+      <a class="btn btn-danger" href="item.html" role="button">Buy now</a>
+        <a class="btn btn-secondary" href="https://cdn.pixabay.com/photo/2016/12/27/09/57/lens-1933639_960_720.png" role="button">View</a>
           </div>
-          <div class="carousel-item">
-            <a href="">
-            <img src="https://i.ytimg.com/vi/fd-HGIy96-k/maxresdefault.jpg" class="d-block w-100 img-fluid" alt="...">
-            </a>
+       </div>
+    </div>
+
+         <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6">
+                <a href="">
+                  <img src="https://4.img-dpreview.com/files/p/E~C150x0S900x900T1200x1200~articles/8837440604/HR_600EXII_RT_3Q_CL.png" class="d-block img-fluid ml-auto w-50" style="max-width: 340px" alt="...">
+                </a>
+              </div>
+              <div class="col col-xl-6 col-lg-6 m-auto text-light">
+        <h4>Canon 600EX Flash</h4>
+        <h5>$99</h5>
+      <a class="btn btn-danger" href="item.html" role="button">Buy now</a>
+        <a class="btn btn-secondary" href="https://4.img-dpreview.com/files/p/E~C150x0S900x900T1200x1200~articles/8837440604/HR_600EXII_RT_3Q_CL.png" role="button">View</a>
           </div>
-        </div>
+       </div>
+    </div>
+</div>
+
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
@@ -209,7 +247,9 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div>                  
+      </div> 
+    
+
 
 
 
@@ -225,17 +265,17 @@
 </div>
         
         
-        <div class="card col-8 col-xl-3" style="width: 18rem;">
-  <img src="https://www.bhphotovideo.com/images/images2500x2500/canon_1263c006_eos_80d_dslr_camera_1225877.jpg" class="card-img-top img-fluid" style="width:300px" alt="...">
+        <div class="card col-6 col-xl-3" style="width: 18rem;">
+  <img src="https://www.bhphotovideo.com/images/images2500x2500/canon_1263c006_eos_80d_dslr_camera_1225877.jpg" class="card-img-top img-fluid" alt="...">
   <div class="card-body d-flex flex-column">
     <h5 class="card-title mt-auto">Canon EOS 80D</h5>
     <p class="card-text  d-none d-xl-block">Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design.</p>
-    <div class="d-flex"><a href="#" class="btn btn-danger mr-1">Buy</a>
-    <a href="#" class="btn btn-danger">Add to Cart</a></div>
+    <div class="d-flex"><a href="item.html" class="btn btn-danger mr-1">Buy</a>
+    <a href="cart.html" class="btn btn-danger">Add to Cart</a></div>
   </div>
 </div>
 
-<div class="card col-8 col-xl-3" style="width: 18rem;">
+<div class="card col-6 col-xl-3" style="width: 18rem;">
   <img src="https://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-YRYNeYvAi9beHK4x3L-8go_p7JUL6JpQM9h_9xTbwyw==/Views/1559_D500_left.png" class="card-img-top img-fluid" alt="...">
   <div class="card-body d-flex flex-column">
     <h5 class="card-title mt-auto">Nikon D500</h5>
@@ -247,23 +287,27 @@
   </div>
 </div>
 
-<div class="card col-8 col-xl-3" style="width: 18rem;">
+<div class="card col-6 col-xl-3" style="width: 18rem;">
   <img src="https://static.bhphoto.com/images/images2500x2500/1519677934_1394219.jpg" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Sony A7</h5>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto">Sony A7</h5>
     <p class="card-text  d-none d-xl-block">The Sony α7, α7R and α7S are three closely related full-frame mirrorless interchangeable-lens cameras. The α7 series is targeted at experienced users, enthusiasts and professionals.</p>
-    <a href="#" class="btn btn-danger">Buy</a>
+    <div class="d-flex">
+    <a href="#" class="btn btn-danger mr-1">Buy</a>
     <a href="#" class="btn btn-danger">Add to Cart</a>
+  </div>
   </div>
 </div>
 
-<div class="card col-8 col-xl-3" style="width: 18rem;">
+<div class="card col-6 col-xl-3" style="width: 18rem;">
   <img src="https://www.adorama.com/images/Large/ifjxa7s.jpg" class="card-img-top img-fluid" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Fujifilm X-A7</h5>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto">Fujifilm X-A7</h5>
     <p class="card-text  d-none d-xl-block">The Fujifilm X-A7 is an entry-level rangefinder-styled digital mirrorless camera announced by Fujifilm on September 12, 2019.</p>
-    <a href="#" class="btn btn-danger">Buy</a>
+    <div class="d-flex">
+    <a href="#" class="btn btn-danger mr-1">Buy</a>
     <a href="#" class="btn btn-danger">Add to Cart</a>
+  </div>
   </div>
 </div>
 
@@ -281,29 +325,46 @@
     <p class="card-text">Olympus, Kodak, Praktica, etc...</p>
   </div>
 </div>
-            <div class="card col-8 col-xl-3" style="width: 18rem;">
+            <div class="card col-6 col-md-4 col-xl-4" style="width: 18rem;">
   <img src="https://cdn.shopify.com/s/files/1/0026/1970/3343/products/OLYMPUSOM1--200329-BeginningFilm-3_900x.jpg?v=1585701790" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto">
 OLYMPUS OM-2n SLR 35mm</h5>
-    <p class="card-text  d-none d-xl-block">The Olympus OM-2 is an aperture-priority automatic-exposure camera.The OM-2 was introduced in 1975</p>
-    <a href="#" class="btn btn-info">Buy</a>
-    <a href="#" class="btn btn-info">Add to Cart</a>
+<h1 class="card-title pricing-card-title d-flex justify-content-left text-info font-weight-bold">250$</h1>
+    <p class="card-text d-none d-xl-block">The Olympus OM-2 is an aperture-priority automatic-exposure camera.The OM-2 was introduced in 1975</p>
+      <div class="d-flex">
+    <a href="#" class="btn btn-info mr-1">Buy</a>
+    <a href="#" class="btn btn-info">Add to Cart</a></div>
   </div>
 </div>
          
-         <div class="card col-8 col-xl-3" style="width: 18rem;">
+         <div class="card col-6 col-md-4 col-xl-4" style="width: 18rem;">
   <img src="https://i.pinimg.com/originals/20/1c/cd/201ccd10b98faf80764efe5db60f931c.jpg" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto">
 Praktika MTL3 SLR 35mm</h5>
+<h1 class="card-title pricing-card-title d-flex justify-content-left text-info font-weight-bold">400$</h1>
     <p class="card-text  d-none d-xl-block">The Praktica MTL 3 is an East German SLR made by Pentacon, using the 42mm screw mount. It was produced in high numbers between 1978 and 1984.</p>
-    <a href="#" class="btn btn-info">Buy</a>
-    <a href="#" class="btn btn-info">Add to Cart</a>
+      <div class="d-flex">
+    <a href="#" class="btn btn-info mr-1">Buy</a>
+    <a href="#" class="btn btn-info">Add to Cart</a></div>
   </div>
 </div>
-         
-         <div class="card col-8 col-xl-3" style="width: 18rem;">
+
+    
+   <div class="card col-6 col-md-4 col-xl-4 d-block d-md-none d-lg-none" style="width: 18rem;">
+  <img src="https://sreda.photo/product-images/kodak_color_plus_135-1.png" alt="..." class="card-img-top img-fluid">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto">Kodak ColorPlus 200</h5>
+<h1 class="card-title pricing-card-title d-flex justify-content-left text-info font-weight-bold">20$</h1>
+    <p class="card-text  d-none d-xl-block">The Praktica MTL 3 is an East German SLR made by Pentacon, using the 42mm screw mount. It was produced in high numbers between 1978 and 1984.</p>
+      <div class="d-flex">
+    <a href="#" class="btn btn-info mr-1">Buy</a>
+    <a href="#" class="btn btn-info">Add to Cart</a></div>
+  </div>
+</div>
+       
+         <!-- <div class="card col-8 col-xl-3" style="width: 18rem;">
   <img src="https://assets.community.lomography.com/9a/3fa937e408ae24ee9d6c8a8fa328095a1d333a/900x675x2.jpg?auth=3cb4f45d822a728951e1456c3699a0a4f333cc5a" alt="..." class="card-img-top img-fluid">
   <div class="card-body">
     <h5 class="card-title">
@@ -312,17 +373,18 @@ Zenit ET SLR 35mm</h5>
     <a href="#" class="btn btn-info">Buy</a>
     <a href="#" class="btn btn-info">Add to Cart</a>
   </div>
-</div>
+</div>  -->
          
-         <div class="card col-8 col-xl-3" style="width: 18rem;">
+         <div class="card col-6 col-md-4 col-xl-4" style="width: 18rem;">
   <img src="https://expertphotography.com/wp-content/uploads/2019/02/film-camera-nikon-pentax-1.jpg" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto">
 Pentax K1000 SLR 35mm</h5>
-    <p class="card-text  d-none d-xl-block">The Pentax K1000 35mm SLR is one of photography's greatest, most popular and longest-lived cameras.
-This Pentax film camera is completely mechanical and needs no battery to run, however, you must purchase an A76 cell battery to run the light meter.</p>
-    <a href="#" class="btn btn-info">Buy</a>
-    <a href="#" class="btn btn-info">Add to Cart</a>
+<h1 class="card-title pricing-card-title d-flex justify-content-left text-info font-weight-bold">100$</h1>
+    <p class="card-text d-none d-xl-block">This Pentax film camera is completely mechanical and needs no battery to run, however, you must purchase an A76 cell battery to run the light meter.</p>
+  <div class="d-flex">
+    <a href="#" class="btn btn-info mr-1">Buy</a>
+    <a href="#" class="btn btn-info">Add to Cart</a></div>
   </div>
 </div>
           </div>
@@ -337,54 +399,70 @@ This Pentax film camera is completely mechanical and needs no battery to run, ho
   </div>
 </div>
            
-     <div class="card col-8 col-xl-3" style="width: 18rem;">
+     <div class="card col-6 col-xl" style="width: 18rem;">
   <img src="https://expertphotography.com/wp-content/uploads/2019/02/film-camera-nikon-pentax-1.jpg" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">
 Pentax K1000 SLR 35mm</h5>
     <h1 class="card-title pricing-card-title d-flex justify-content-center text-success">80$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">100$</h3>
-    <a href="#" class="btn btn-success">Buy</a>
-    <a href="#" class="btn btn-success">Add to Cart</a>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-success mr-1">Buy</a>
+    <a href="#" class="btn btn-success">Add to Cart</a></div>
   </div>
 </div>     
       
-       <div class="card col-8 col-xl-3" style="width: 18rem;">
+       <div class="card col-6 col-xl" style="width: 18rem;">
   <img src="https://static.bhphoto.com/images/images2500x2500/1519677934_1394219.jpg" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">
 Sony A7</h5>
     <h1 class="card-title pricing-card-title d-flex justify-content-center text-success">540$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">600$</h3>
-    <a href="#" class="btn btn-success">Buy</a>
-    <a href="#" class="btn btn-success">Add to Cart</a>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-success mr-1">Buy</a>
+    <a href="#" class="btn btn-success">Add to Cart</a></div>
   </div>
 </div> 
            
-      <div class="card col-8 col-xl-3" style="width: 18rem;">
+      <div class="card col-6 col-xl" style="width: 18rem;">
   <img src="https://i.pinimg.com/originals/20/1c/cd/201ccd10b98faf80764efe5db60f931c.jpg" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">
 Praktica MLT3 SLR 35mm</h5>
     <h1 class="card-title pricing-card-title d-flex justify-content-center text-success">240$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">300$</h3>
-    <a href="#" class="btn btn-success">Buy</a>
-    <a href="#" class="btn btn-success">Add to Cart</a>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-success mr-1">Buy</a>
+    <a href="#" class="btn btn-success">Add to Cart</a></div>
   </div>
 </div> 
        
-       <div class="card col-8 col-xl-3" style="width: 18rem;">
+       <div class="card col-6 col-xl" style="width: 18rem;">
   <img src="https://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-YRYNeYvAi9beHK4x3L-8go_p7JUL6JpQM9h_9xTbwyw==/Views/1559_D500_left.png" class="card-img-top img-fluid" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">
 Nikon D500</h5>
     <h1 class="card-title pricing-card-title d-flex justify-content-center text-success">400$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">500$</h3>
-    <a href="#" class="btn btn-success">Buy</a>
-    <a href="#" class="btn btn-success">Add to Cart</a>
+    <div class="d-flex justify-content-center">    <a href="#" class="btn btn-success mr-1">Buy</a>
+    <a href="#" class="btn btn-success">Add to Cart</a></div>
+
   </div>
 </div> 
            
+       <div class="card col-8 col-xl" style="width: 18rem;">
+  <img src="https://expertphotography.com/wp-content/uploads/2019/02/film-camera-nikon-pentax-1.jpg" alt="..." class="card-img-top img-fluid">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">
+Pentax K1000 SLR 35mm</h5>
+    <h1 class="card-title pricing-card-title d-flex justify-content-center text-success">80$</h1>
+    <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">100$</h3>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-success mr-1">Buy</a>
+    <a href="#" class="btn btn-success">Add to Cart</a></div>
+  </div>
+</div>     
            
         </div>
                  
@@ -405,51 +483,51 @@ Nikon D500</h5>
  <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:black">
-    Link Group 1
+    Phone Numbers
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">+374 - 98 - 546 - 324</a>
+  <a href="#" class="action text-center" style="color:grey">+374 - 98 - 645 - 210</a>
+  <a href="#" class="action text-center" style="color:grey">+374 - 98 - 587 - 369</a>
 </ul>
 </div>
           <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:#bf0000">
-    Link Group 2
+    Instagram Accounts
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">@magnumphotos</a>
+  <a href="#" class="action text-center" style="color:grey">@somwheremagazine</a>
+  <a href="#" class="action text-center" style="color:grey">@insomniamagazine</a>
 </ul>
 </div>
          <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:black">
-    Link Group 3
+    Facebook Accounts
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">Magnum Photos</a>
+  <a href="#" class="action text-center" style="color:grey">Somwhere Magazine</a>
+  <a href="#" class="action text-center" style="color:grey">Insomnia Magazine</a>
 </ul>
 </div>
          <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:#bf0000">
-    Link Group 4
+    Twitter Accounts
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">Magnum</a>
+  <a href="#" class="action text-center" style="color:grey">Insomnia Mag.</a>
+  <a href="#" class="action text-center" style="color:grey">Somwhere Mag.</a>
 </ul>
 </div>
          <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:black">
-    Link Group 5
+    Partners
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">Canon</a>
+  <a href="#" class="action text-center" style="color:grey">Fuji</a>
+  <a href="#" class="action text-center" style="color:grey">Kodak</a>
 </ul>
 </div>
 
@@ -608,5 +686,6 @@ Nikon D500</h5>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
   </body>
 </html>

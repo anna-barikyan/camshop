@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
 
     <title>CamShop</title>
   </head>
@@ -14,14 +16,15 @@
       <div class="container-fluid">
            
           <div class="header">
-          <div class="row bg-dark p-3">   
+
+         <div class="row bg-dark p-3">   
             <div class="col-6 col-lg-4">
             <a  href="index.html" class="text-white font-weight-bold align-center"> CamShop
             <img src= "https://i.pinimg.com/originals/80/a1/f1/80a1f1e0f77e87a7208475287b86aa4d.png" width="50">
             </a>
             </div>
              
-           <div class= "col-6  col-lg-auto d-none d-lg-block p-1 ml-auto">
+           <div class= "col-lg-auto d-none d-lg-block p-1 ml-auto">
            <form class="form-inline">
            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
@@ -30,7 +33,7 @@
             
             
              
-             <div class="dropdown col-lg-auto col-6 p-1">
+             <div class="dropdown col-lg-auto col-4 mt-1">
              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       My Account
              </button>
@@ -38,10 +41,20 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#LoginModal">Login</a>
                       <a class="dropdown-item" href="#" data-toggle="modal" data-target="#RegistrationModal">Registration</a>
-                      <a class="dropdown-item" href="#">Orders</a>
-                      <a class="dropdown-item" href="#">Settings</a>
+                      <a class="dropdown-item" href="my_account.html">Orders</a>
+                      <a class="dropdown-item" href="my_info.html">Settings</a>
                     </div>
-              </div>
+                  </div>
+
+                  <div class="col-2 col-lg-auto">
+                   
+                  <button type="button" class="btn btn-danger">
+                    <a href="cart.html"><img src="https://pluspng.com/img-png/shop-png-black-and-white-logo-512.png" style="width:40px"></a> 
+                  </button>
+
+                </div>
+
+
             </div>
     
       
@@ -69,9 +82,9 @@
         <option value="3">€ - Euro</option>
       </select>
     </div>
-      <button type="button" class="btn btn-danger col-lg d-none d-lg-block">
+      <a href="my_account.html" type="button" class="btn btn-danger col-lg d-none d-lg-block">
         Wishlist <span class="badge badge-light">5</span>
-      </button>
+      </a>
          </div>
 
   
@@ -89,9 +102,9 @@
                 Canon
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+                <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lense</a>
+                <a class="dropdown-item" href="#">Other</a></div>
             </li>
           </ul>
 
@@ -102,9 +115,9 @@
                Nikon
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+               <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lense</a>
+                <a class="dropdown-item" href="#">Other</a></div>
             </li>
           </ul>
 
@@ -112,12 +125,12 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                 Fuji
+                 Fujifilm
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+            <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lense</a>
+                <a class="dropdown-item" href="#">Film</a></div>
             </li>
           </ul>
 
@@ -128,9 +141,9 @@
                  Sony
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+                <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lens</a>
+                <a class="dropdown-item" href="#">Film</a></div>
             </li>
           </ul>
 
@@ -141,9 +154,9 @@
                  Minolta
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+              <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lens</a>
+                <a class="dropdown-item" href="#">Other</a></div>
             </li>
           </ul>
 
@@ -154,13 +167,13 @@
                 Kodak
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">SubCategory 1</a>
-                <a class="dropdown-item" href="#">SubCategory 2</a>
-                <a class="dropdown-item" href="#">SubCategory 3</a></div>
+              <a class="dropdown-item" href="shop.html">Camera</a>
+                <a class="dropdown-item" href="#">Lighting</a>
+                <a class="dropdown-item" href="#">Film</a></div>
             </li>
           </ul>
 </nav>
-</div>
+        </div>
 
         
 <nav aria-label="breadcrumb" class="col-lg-12 mt-3 ml-2">
@@ -170,37 +183,38 @@
     <li class="breadcrumb-item active" aria-current="page">Canon EOS 80D</li>
   </ol>
 </nav>
-        <div class="row p-5">
+        <div class="row p-3">
 
 
             <div class="col col-lg-3 d-none d-lg-block">
                 
                   
                     <div class="col col-lg-12 d-none d-lg-block pb-2">
-                      <img src="https://www.canon.am/media/EOS%2080D%20Angle4_tcm207-1351538.jpg" class="img-thumbnail img-fluid w-50">
+                      <a data-fancybox="gallery" href="https://www.canon.am/media/EOS%2080D%20Angle4_tcm207-1351538.jpg"><img src="https://www.canon.am/media/EOS%2080D%20Angle4_tcm207-1351538.jpg" class="img-thumbnail img-fluid w-50"></a>
                     </div>
 
                     <div class="col col-lg-12 d-none d-lg-block pb-2">
-                      <img src="https://www.canon.am/media/EOS%2080D%20Angle2_tcm207-1351534.jpg" class="img-thumbnail img-fluid w-50">
+                      <a data-fancybox="gallery" href="https://www.canon.am/media/EOS%2080D%20Angle2_tcm207-1351534.jpg">
+                       <img src="https://www.canon.am/media/EOS%2080D%20Angle2_tcm207-1351534.jpg" class="img-thumbnail img-fluid w-50">
                     </div>
 
 
                    <div class="col col-lg-12 d-none d-lg-block pb-2">
-                      <img src="https://www.canon.am/media/EOS%2080D%20Angle3_tcm207-1351536.jpg" class="img-thumbnail img-fluid w-50">
+                      <a data-fancybox="gallery" href="https://www.canon.am/media/EOS%2080D%20Angle3_tcm207-1351536.jpg"><img src="https://www.canon.am/media/EOS%2080D%20Angle3_tcm207-1351536.jpg" class="img-thumbnail img-fluid w-50"></a>
                     </div>
 
                     <div class="col col-lg-12 d-none d-lg-block pb-2">
-                      <img src="https://www.canon.am/media/EOS%2080D%20Angle6_tcm207-1351542.jpg" class="img-thumbnail img-fluid w-50">
+                      <a data-fancybox="gallery" href="https://www.canon.am/media/EOS%2080D%20Angle6_tcm207-1351542.jpg"><img src="https://www.canon.am/media/EOS%2080D%20Angle6_tcm207-1351542.jpg" class="img-thumbnail img-fluid w-50"></a>
                     </div>
 
             </div>
 
-            <div class="col-lg-5">
+            <div class="col-6 col-lg-5">
              <h1 class="text-black font-weight-bold ml-4 mb-2">Canon EOS 80D</h1>   
-             <img src="https://www.bhphotovideo.com/images/images2500x2500/canon_1263c006_eos_80d_dslr_camera_1225877.jpg"class="img-fluid" style="width:350px">
+            <a data-fancybox="gallery" href="https://www.bhphotovideo.com/images/images2500x2500/canon_1263c006_eos_80d_dslr_camera_1225877.jpg"> <img src="https://www.bhphotovideo.com/images/images2500x2500/canon_1263c006_eos_80d_dslr_camera_1225877.jpg"class="img-fluid" style="width:350px"></a>
            </div>
 
-            <div class="col col-lg-2 mr-auto">
+            <div class="col-6 col-lg-2 mr-auto">
                 <h1 class="font-italic">$749</h1>
                 <form>
                     <div class="form-row align-items-center">
@@ -233,12 +247,12 @@
                     <label class="custom-control-label" for="customRadioInline2">Without</label>
                 </div>
                 <div>
-                <button type="button" class="btn btn-primary mt-3">Buy</button>
-                  <button type="button" class="btn btn-primary mt-3">Add To Cart</button></div>
+                <a href="address.html" type="button" class="btn btn-primary mt-3">Buy</a>
+                  <a href="cart.html" type="button" class="btn btn-primary mt-3">Add To Cart</a></div>
             </div>
         </div>
                 
-        <div class="card text-center" style="max-width:1200px; margin-left: 70px">
+        <div class="card text-center" style="max-width:2000px;">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
@@ -272,58 +286,59 @@
 
   <div class="bg-light row mt-4 d-flex justify-content-center">
 <h2 class="col-lg-12 text-center mb-4 mt-4 text-dark"> You Might Also Like</h2>
-  <div class="card col-8 col-xl-2 mr-5" style="width: 18rem;">
+  <div class="card col-6 col-xl-3" style="width: 18rem;">
   <img src="https://expertphotography.com/wp-content/uploads/2019/02/film-camera-nikon-pentax-1.jpg" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
-Pentax K1000 SLR 35mm</h5>
-    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary">80$</h1>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">Pentax K1000 SLR 35mm</h5>
+    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary text-center">80$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">100$</h3>
-    <a href="#" class="btn btn-primary">Buy</a>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-primary mr-1">Buy</a>
+    <a href="#" class="btn btn-primary">Add to Cart</a></div>
   </div>
 </div>     
       
-       <div class="card col-8 col-xl-2 mr-5" style="width: 18rem;">
-  <img src="https://static.bhphoto.com/images/images2500x2500/1519677934_1394219.jpg" alt="..." class="card-img-top img-fluid" style="width: 250px">
-  <div class="card-body">
-    <h5 class="card-title">
-Sony A7</h5>
-    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary">540$</h1>
+       <div class="card col-6 col-xl-3" style="width: 18rem;">
+  <img src="https://static.bhphoto.com/images/images2500x2500/1519677934_1394219.jpg" alt="..." class="card-img-top img-fluid">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">Sony A7</h5>
+    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary text-center">540$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">600$</h3>
-    <a href="#" class="btn btn-primary">Buy</a>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-primary mr-1">Buy</a>
+    <a href="#" class="btn btn-primary">Add to Cart</a></div>
   </div>
 </div> 
            
-      <div class="card col-8 col-xl-2 mr-5" style="width: 18rem;">
+      <div class="card col-6 col-xl-3" style="width: 18rem;">
   <img src="https://i.pinimg.com/originals/20/1c/cd/201ccd10b98faf80764efe5db60f931c.jpg" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">
 Praktica MLT3 SLR 35mm</h5>
-    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary">240$</h1>
+    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary text-center">240$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">300$</h3>
-    <a href="#" class="btn btn-primary">Buy</a>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-primary mr-1">Buy</a>
+    <a href="#" class="btn btn-primary">Add to Cart</a></div>
   </div>
 </div> 
        
-       <div class="card col-8 col-xl-2 mr-5" style="width: 18rem;">
+       <div class="card col-6 col-xl-3" style="width: 18rem;">
   <img src="https://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-YRYNeYvAi9beHK4x3L-8go_p7JUL6JpQM9h_9xTbwyw==/Views/1559_D500_left.png" class="card-img-top img-fluid" alt="..." class="card-img-top img-fluid">
-  <div class="card-body">
-    <h5 class="card-title">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title mt-auto text-center">
 Nikon D500</h5>
-    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary">400$</h1>
+    <h1 class="card-title pricing-card-title d-flex justify-content-center text-primary text-center">400$</h1>
     <h3 class="card-title pricing-card-title d-flex justify-content-center text-muted" style="text-decoration: line-through">500$</h3>
-    <a href="#" class="btn btn-primary">Buy</a>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <div class="d-flex justify-content-center">
+    <a href="#" class="btn btn-primary mr-1">Buy</a>
+    <a href="#" class="btn btn-primary">Add to Cart</a></div>
   </div>
 </div> 
     </div>
 
-     <div class="footer mt-4">
-
-    <div class="row">
+    <div class="footer mt-4">                 
+        <div class="row">
 
   <a href="#" class="border list-group-item list-group-item-action col-lg-3 col-sm-12 text-uppercase font-weight-bold text-center" style="">contact us</a>
   <a href="#" class="border list-group-item list-group-item-action col-lg-3 col-sm-12 text-uppercase font-weight-bold text-center" style="">live chat</a>
@@ -332,56 +347,57 @@ Nikon D500</h5>
         
       </div>
       
+      
       <div class="row">
         
  <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:black">
-    Link Group 1
+    Phone Numbers
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">+374 - 98 - 546 - 324</a>
+  <a href="#" class="action text-center" style="color:grey">+374 - 98 - 645 - 210</a>
+  <a href="#" class="action text-center" style="color:grey">+374 - 98 - 587 - 369</a>
 </ul>
 </div>
           <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:#bf0000">
-    Link Group 2
+    Instagram Accounts
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">@magnumphotos</a>
+  <a href="#" class="action text-center" style="color:grey">@somwheremagazine</a>
+  <a href="#" class="action text-center" style="color:grey">@insomniamagazine</a>
 </ul>
 </div>
          <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:black">
-    Link Group 3
+    Facebook Accounts
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">Magnum Photos</a>
+  <a href="#" class="action text-center" style="color:grey">Somwhere Magazine</a>
+  <a href="#" class="action text-center" style="color:grey">Insomnia Magazine</a>
 </ul>
 </div>
          <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:#bf0000">
-    Link Group 4
+    Twitter Accounts
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">Magnum</a>
+  <a href="#" class="action text-center" style="color:grey">Insomnia Mag.</a>
+  <a href="#" class="action text-center" style="color:grey">Somwhere Mag.</a>
 </ul>
 </div>
          <div class="border col-lg d-none d-lg-block">
  <ul class="list-group">
   <a href="#" class="text-uppercase action text-center font-weight-bold" style="color:black">
-    Link Group 5
+    Partners
   </a>
-  <a href="#" class="action text-center" style="color:grey">link 1</a>
-  <a href="#" class="action text-center" style="color:grey">link 2</a>
-  <a href="#" class="action text-center" style="color:grey">link 3</a>
+  <a href="#" class="action text-center" style="color:grey">Canon</a>
+  <a href="#" class="action text-center" style="color:grey">Fuji</a>
+  <a href="#" class="action text-center" style="color:grey">Kodak</a>
 </ul>
 </div>
 
@@ -407,14 +423,131 @@ Nikon D500</h5>
         <div class = "col-lg-5 col-12 font-weight-bold  text-white text-center"> © Tumo Center for Creative Technologies</div>
       </div>
 
-
-      </div>
+  </div>
 
      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+     <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+          
+          
+          <div class="modal fade" id="RegistrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+          <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+          <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3">
+    </div>
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Female
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+          <label class="form-check-label" for="gridRadios3">
+            Other
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+        <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Birth Year</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-2">Terms & Conditions</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          I Agree
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
